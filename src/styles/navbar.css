@@ -1,0 +1,158 @@
+/* Base navbar styles */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  padding: 12px 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
+}
+
+/* Light theme */
+.navbar.light {
+  background: linear-gradient(to right, #4f46e5, #4338ca);
+  color: white;
+}
+
+/* Dark theme */
+.navbar.dark {
+  background-color: #1f2937;
+  color: white;
+}
+
+/* Container to align contents */
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand styling */
+.brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  color: inherit;
+}
+
+/* Menu icon (hamburger) */
+.menu-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+}
+
+.menu-btn .icon {
+  width: 28px;
+  height: 28px;
+  color: white;
+}
+
+/* Navbar links for mobile */
+.navbar-links {
+  display: none;
+  flex-direction: column;
+  background-color: #111827;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1rem;
+}
+
+.navbar-links.open {
+  display: flex;
+}
+
+.navbar-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-links ul li {
+  margin: 8px 0;
+}
+
+.navbar-links ul li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links ul li a:hover {
+  color: black;
+}
+
+/* Right side: icons and theme toggle */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Icons */
+.icon {
+  width: 20px;
+  height: 20px;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Icon hover effects */
+.youtube:hover {
+  color: #FF0000;
+}
+
+.github:hover {
+  color: #d1c411;
+}
+
+.linkedin:hover {
+  color: green;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sun {
+  color: #facc15;
+}
+
+.moon {
+  color: #e5e7eb;
+}
+
+/* Large screens */
+@media (min-width: 1024px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .navbar-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    width: auto;
+    padding: 0;
+  }
+
+  .navbar-links ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .navbar-links ul li {
+    margin: 0;
+  }
+}

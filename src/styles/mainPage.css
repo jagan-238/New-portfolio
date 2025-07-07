@@ -1,0 +1,170 @@
+.main-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
+  min-height: 80vh;
+  transition: background-color 0.3s;
+}
+
+.main-page.light {
+  background-color: #f3f4f6;
+  color: #1f2937;
+}
+
+.main-page.dark {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+.text-section {
+  max-width: 600px;
+  text-align: center;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.main-page.dark .intro-text {
+  color: #d1d5db;
+}
+
+.main-heading {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.highlight-name {
+  color: orangered;
+}
+
+.role-heading {
+  font-size: 1.5rem;
+  color: #6366f1;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.description {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: inherit;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.resume-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.resume-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.resume-btn:focus,
+.contact-btn:focus {
+  outline: 2px solid #93c5fd;
+  outline-offset: 2px;
+}
+
+.contact-btn {
+  padding: 0.5rem 1.5rem;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.contact-btn:hover {
+  background-color: #2563eb;
+  color: white;
+}
+
+.image-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  width: 15rem;
+  height: 15rem;
+  background-color: #30b715;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-img {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 9999px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.tag {
+  position: absolute;
+  background-color: #3b82f6;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  animation: spinSlow 10s linear infinite;
+}
+
+.bottom-tag {
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #6366f1;
+}
+
+.top-tag {
+  top: 0.5rem;
+  left: 0.5rem;
+  background-color: #3b82f6;
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-page {
+    flex-direction: row;
+    align-items: start;
+    gap: 3rem;
+  }
+
+  .text-section {
+    text-align: left;
+  }
+}

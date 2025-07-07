@@ -1,0 +1,77 @@
+/* Slimmed-down GitHub Section Styles */
+.github-section {
+  padding: 2rem 1rem;     /* reduced overall padding */
+  transition: all 0.3s ease;
+}
+
+.github-section.light {
+  background-color: #f9fafb;
+  color: #1f2937;
+}
+
+.github-section.dark {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+.github-container {
+  max-width: 800px;        /* narrower container */
+  margin: 0 auto;
+}
+
+.github-header {
+  text-align: center;
+  margin-bottom: 2rem;     /* tighter spacing */
+}
+
+.github-icon {
+  width: 30px;             /* smaller icon */
+  height: 30px;
+  margin-bottom: 0.5rem;
+  color: inherit;
+}
+
+.github-title {
+  font-size: 1.5rem;       /* smaller title */
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.github-subtitle {
+  font-size: 0.9rem;       /* smaller subtitle */
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.github-card {
+  background-color: inherit;
+  border-radius: 0.5rem;   /* tighter corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;           /* reduced padding */
+  margin-bottom: 1.5rem;   /* less space */
+  transition: all 0.3s ease;
+}
+
+.github-section.dark .github-card {
+  background-color: #111827;
+}
+
+.github-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+}
+
+.github-section-title {
+  font-size: 1.1rem;       /* smaller section titles */
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .github-card {
+    padding: 1.25rem;
+  }
+}
