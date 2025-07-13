@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import Skills from './components/Skills';
 import MainPage from './components/MainPage';
 import Projects from './components/Projects';
-import AboutMe from './components/AboutMe';
+import About from './components/About';
 import GitHub from './components/GitHub';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
@@ -16,7 +16,7 @@ function App() {
       <div className="app">
         <Navbar />
         <MainPage />
-        <AboutMe />
+        <About />
         <Skills />
         <Projects />
         <GitHub />

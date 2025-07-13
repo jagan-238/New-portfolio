@@ -1,13 +1,12 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
-import '../styles/aboutMe.css'; 
+import '../styles/about.css'; 
 
 const AboutMe = () => {
   const { isDarkMode } = useTheme();
 
   return (
-    <div className={`about-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
-      {/* About Section */}
+    <div id="about" className="about-container">
       <div className="about-section">
         <h1 className="section-title">
           About <span className="highlight">Me</span>

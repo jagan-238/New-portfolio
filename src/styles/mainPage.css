@@ -3,11 +3,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 5rem 1rem; /* More vertical space */
   gap: 2rem;
-  min-height: 80vh;
+  min-height: 100vh;  /* Full screen height for proper centering */
   transition: background-color 0.3s;
 }
+
 
 .main-page.light {
   background-color: #f3f4f6;

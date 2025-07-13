@@ -7,7 +7,8 @@ const MainPage = () => {
   const { isDarkMode } = useTheme();
 
   return (
-    <div id="about" className={`main-page ${isDarkMode ? 'dark' : 'light'}`}>
+    <div id="home" className="main-page">
+
       {/* Left Text Section */}
       <div className="text-section">
         <h2 className="intro-text">Hello!</h2>
@@ -26,7 +27,7 @@ const MainPage = () => {
           <button
             className="resume-btn"
             onClick={() =>
-              window.open('https://drive.google.com/drive/u/0/home', '_blank')
+              window.open('https://drive.google.com/file/d/1J2EGiIAIdMwBfNfmrV-J1AofGxaMlCXm/view?usp=sharing', '_blank')
             }
           >
             Resume

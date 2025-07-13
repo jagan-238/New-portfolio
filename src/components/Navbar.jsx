@@ -15,7 +15,7 @@ function Navbar() {
     { name: "Contact", href: "#contact" },
     {
       name: "Resume",
-      href: "https://drive.google.com/file/d/1-nnQCWhhylRm0T_EqB_yuqD6dE-DNVdt/view?usp=sharing", // ✅ Use direct file link if available
+      href: "https://drive.google.com/file/d/1J2EGiIAIdMwBfNfmrV-J1AofGxaMlCXm/view?usp=sharing", 
       download: false,
     },
   ];

@@ -8,12 +8,19 @@
   transition: background-color 0.3s ease;
 }
 
+/* Responsive layout for large screens */
 @media (min-width: 1024px) {
   .about-container {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between; /* ✅ Fix: align left/right properly */
     padding: 5rem;
+  }
+
+  .about-section,
+  .education-section {
+    width: 50%;            /* ✅ Equal width for side-by-side layout */
+    max-width: 600px;
   }
 }
 
@@ -128,7 +135,20 @@
   color: #e5e7eb;
 }
 
-/* Responsive Fixes */
+/* Responsive Fixes for smaller devices */
+@media (max-width: 1023px) {
+  .about-section,
+  .education-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto; /* ✅ Center content */
+  }
+
+  .about-section {
+    text-align: center; /* ✅ Center text for About */
+  }
+}
+
 @media (max-width: 768px) {
   .timeline {
     padding-left: 12px;
