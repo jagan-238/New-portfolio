@@ -1,15 +1,16 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
-import myImage from '../assets/profile2.png'; 
-import '../styles/mainPage.css'; 
+import myImage from '../assets/profile2.png';
+import myResume from '../assets/resume.pdf';
+
+import '../styles/mainPage.css';
 
 const MainPage = () => {
   const { isDarkMode } = useTheme();
 
   return (
-    <div id="home" className="main-page">
-
-      {/* Left Text Section */}
+    <div id="home" className={`main-page ${isDarkMode ? 'dark' : 'light'}`}>
+      {/* Left Section */}
       <div className="text-section">
         <h2 className="intro-text">Hello!</h2>
         <h1 className="main-heading">
@@ -24,26 +25,16 @@ const MainPage = () => {
           learning and eager to contribute to impactful tech solutions.
         </p>
         <div className="button-group">
-          <button
-            className="resume-btn"
-            onClick={() =>
-              window.open('https://drive.google.com/file/d/1J2EGiIAIdMwBfNfmrV-J1AofGxaMlCXm/view?usp=sharing', '_blank')
-            }
-          >
-            Resume
-          </button>
-          <a href="#contact" className="contact-btn">
-            Contact
-          </a>
+          <a href={myResume} download className="resume-btn">Download Resume</a>
+          <a href="#contact" className="contact-btn">Contact</a>
         </div>
       </div>
 
-      {/* Right Image Section */}
+      {/* Right Section */}
       <div className="image-section">
         <div className="image-container">
           <img src={myImage} alt="Jagan Mohan Reddy" className="profile-img" />
         </div>
-
       </div>
     </div>
   );

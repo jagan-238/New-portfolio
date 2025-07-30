@@ -2,9 +2,9 @@
 .about-container {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding: 4rem 1rem;
-  min-height: 100vh;
+  gap: 2rem;
+  padding: 5rem 1rem 1.5rem; /* Top space fixed, bottom reduced */
+  min-height: auto;
   transition: background-color 0.3s ease;
 }
 
@@ -13,13 +13,14 @@
   .about-container {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between; /* ✅ Fix: align left/right properly */
-    padding: 5rem;
+    justify-content: space-between;
+    padding: 5rem 4rem 1.5rem;
+    gap: 2rem;
   }
 
   .about-section,
   .education-section {
-    width: 50%;            /* ✅ Equal width for side-by-side layout */
+    width: 50%;
     max-width: 600px;
   }
 }
@@ -39,6 +40,8 @@
 .about-section {
   flex: 1;
   max-width: 600px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .section-title {
@@ -69,6 +72,8 @@
 .education-section {
   flex: 1;
   padding-left: 1rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .timeline {
@@ -141,11 +146,20 @@
   .education-section {
     width: 100%;
     max-width: 700px;
-    margin: 0 auto; /* ✅ Center content */
+    margin: 0 auto;
   }
 
   .about-section {
-    text-align: center; /* ✅ Center text for About */
+    text-align: center;
+  }
+
+  .education-section {
+    padding-left: 0;
+  }
+
+  .about-container {
+    padding: 4rem 1rem 1.5rem;
+    gap: 1.5rem;
   }
 }
 
@@ -162,5 +176,34 @@
     left: -8px;
     width: 12px;
     height: 12px;
+  }
+}
+
+/* ✅ Tablet Fix (iPad Air, 768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .about-container {
+    gap: 1.5rem;
+    padding: 3.5rem 1rem 1.5rem;
+    flex-direction: column;
+  }
+
+  .about-section,
+  .education-section {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+/* ✅ iPad Pro Fix (1024px - 1366px) */
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .about-container {
+    padding: 4.5rem 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .education-section {
+    padding-left: 1.5rem;
   }
 }

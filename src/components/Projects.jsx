@@ -6,7 +6,7 @@ import "../styles/projects.css"; // Correct path
 import casioImg from "../assets/projectImg/casio.png";
 import votingImg from "../assets/projectImg/voting.png";
 import travelImg from "../assets/projectImg/travel.png";
-import mapsImg from "../assets/projectImg/maps.png";
+import TastyImg from "../assets/projectImg/Tasty.png";
 
 const projects = [
   {
@@ -37,13 +37,13 @@ const projects = [
     image: travelImg,
   },
   {
-    title: "Google Maps Clone",
+    title: "TastyTrail",
     description:
-      "Google Maps clone using Leaflet.js with live location, search, routing, and saved places.",
-    tech: ["HTML", "CSS", "JavaScript", "Leaflet.js"],
-    liveLink: "https://gregarious-rolypoly-fa516b.netlify.app/",
-    codeLink: "https://github.com/jagan-238/google--maps",
-    image: mapsImg,
+      "TastyTrail Express is a simple and elegant food ordering app where users can browse a delicious menu of items like biryanis, cakes, juices and more. Add your favorite dishes to the cart and place an order with ease.",
+    tech: ["HTML", "CSS", "JavaScript", "Firebase"],
+    liveLink: "https://tastyfoods-app.netlify.app/",
+    codeLink: "https://github.com/jagan-238/Recipe-App",
+    image: TastyImg,
   },
 ];
 
