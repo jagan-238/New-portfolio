@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Menu, Youtube, Github, Linkedin, Moon, Sun } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import myResume from "../assets/jagan_resume.pdf";
+// import myResume from "../assets/jagan_resume.pdf";
 import "../styles/navbar.css";
 
 function Navbar() {
@@ -16,18 +16,20 @@ function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
-  const handleResumeClick = () => {
-    // Open resume in new tab
-    window.open(myResume, "_blank");
+ const handleResumeClick = () => {
+  const fileId = "1i92Mi4HCEKprpeoPlVNfOJgXA30uSELj";
 
-    // Download resume
-    const link = document.createElement("a");
-    link.href = myResume;
-    link.download = "Jagan_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // 1. Open resume in a new tab (preview)
+  window.open(`https://drive.google.com/file/d/${fileId}/view`, "_blank");
+
+  // 2. Trigger download
+  const downloadLink = document.createElement("a");
+  downloadLink.href = `https://drive.google.com/uc?export=download&id=${fileId}`;
+  downloadLink.download = "Jagan_Resume.pdf";
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+};
 
   return (
     <nav className={`navbar ${isDarkMode ? "dark" : "light"}`}>
