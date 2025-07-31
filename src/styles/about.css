@@ -1,14 +1,16 @@
-/* Container for About + Education layout */
+/* ========== Container for About + Education ========== */
 .about-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 5rem 1rem 1.5rem; /* Top space fixed, bottom reduced */
-  min-height: auto;
+  padding: 5rem 1rem 1.5rem;
   transition: background-color 0.3s ease;
+  min-height: auto;
+  max-width: 1050px;        
+  margin: 0 auto;           
 }
 
-/* Responsive layout for large screens */
+/* ========== Responsive Layout: Large Screens ========== */
 @media (min-width: 1024px) {
   .about-container {
     flex-direction: row;
@@ -25,7 +27,7 @@
   }
 }
 
-/* Theme Modes */
+/* ========== Theme Modes ========== */
 .light-mode {
   background-color: #f3f4f6;
   color: #1f2937;
@@ -36,7 +38,7 @@
   color: #f9fafb;
 }
 
-/* About Section */
+/* ========== About Section ========== */
 .about-section {
   flex: 1;
   max-width: 600px;
@@ -68,7 +70,7 @@
   font-weight: 600;
 }
 
-/* Education Section */
+/* ========== Education Section ========== */
 .education-section {
   flex: 1;
   padding-left: 1rem;
@@ -81,14 +83,14 @@
   border-left: 4px solid #6366f1;
   padding-left: 20px;
   max-width: 600px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .timeline-item {
   margin-bottom: 40px;
-  text-align: left;
   padding-left: 20px;
   position: relative;
+  text-align: left;
 }
 
 .timeline-item::before {
@@ -103,7 +105,7 @@
   border: 2px solid white;
 }
 
-/* Education Text */
+/* ========== Education Text Styles ========== */
 .education-title {
   font-size: 1.25rem;
   font-weight: 600;
@@ -140,8 +142,14 @@
   color: #e5e7eb;
 }
 
-/* Responsive Fixes for smaller devices */
+/* ========== Responsive Fixes: Below 1024px ========== */
 @media (max-width: 1023px) {
+  .about-container {
+    flex-direction: column;
+    padding: 4rem 1rem 1.5rem;
+    gap: 1.5rem;
+  }
+
   .about-section,
   .education-section {
     width: 100%;
@@ -156,13 +164,9 @@
   .education-section {
     padding-left: 0;
   }
-
-  .about-container {
-    padding: 4rem 1rem 1.5rem;
-    gap: 1.5rem;
-  }
 }
 
+/* ========== Responsive Fixes: Tablets and Smaller ========== */
 @media (max-width: 768px) {
   .timeline {
     padding-left: 12px;
@@ -179,24 +183,21 @@
   }
 }
 
-/* ✅ Tablet Fix (iPad Air, 768px - 1023px) */
+/* ✅ iPad Air (768px - 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
   .about-container {
-    gap: 1.5rem;
-    padding: 3.5rem 1rem 1.5rem;
     flex-direction: column;
+    padding: 3.5rem 1rem 1.5rem;
+    gap: 1.5rem;
   }
 
   .about-section,
   .education-section {
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto;
     text-align: center;
   }
 }
 
-/* ✅ iPad Pro Fix (1024px - 1366px) */
+/* ✅ iPad Pro (1024px - 1366px) */
 @media (min-width: 1024px) and (max-width: 1366px) {
   .about-container {
     padding: 4.5rem 2rem 1.5rem;

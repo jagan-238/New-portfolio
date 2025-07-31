@@ -1,19 +1,22 @@
 .main-page {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 100px 40px 60px; /* ⬅️ Top padding increased to 100px */
-  gap: 40px;
   flex-wrap: wrap;
+  padding: 120px 60px 80px; /* ⬆️ Increased top & side padding */
+  gap: 60px;                /* ⬆️ More spacing between image and text */
+  flex-wrap: wrap;
+  max-width: 1050px;        /* ⬅️ Limit width like home.css */
+  margin: 0 auto;           /* ⬅️ Center the section */
 }
 
 .text-section {
-  flex: 1 1 400px;
-  max-width: 550px; /* reduced */
+  flex: 1 1 450px;
+  max-width: 600px;         /* ⬆️ Slightly increased for wider screens */
 }
 
 .image-section {
-  flex: 1 1 300px;
+  flex: 1 1 320px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +24,8 @@
 
 .image-container {
   width: 100%;
-  max-width: 300px; /* reduced */
-  padding: 8px;
+  max-width: 300px;
+  padding: 10px;
   background-color: #222;
   border-radius: 18px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -36,15 +39,15 @@
   display: block;
 }
 
-/* Text size reductions */
+/* Typography spacing and size tuning */
 .intro-text {
-  font-size: 1.5rem;
-  margin-bottom: 8px;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 .main-heading {
-  font-size: 2.3rem;
-  margin: 8px 0;
+  font-size: 2.5rem;
+  margin: 12px 0;
 }
 
 .highlight-name {
@@ -52,28 +55,28 @@
 }
 
 .role-heading {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
   color: black;
 }
 
 .description {
-  font-size: 1rem;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: black;
 }
 
 .button-group {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
 .resume-btn,
 .contact-btn {
-  padding: 8px 16px;
-  font-size: 0.95rem;
+  padding: 10px 20px;
+  font-size: 1rem;
   border-radius: 6px;
   text-decoration: none;
   transition: 0.3s ease;
@@ -99,7 +102,7 @@
   color: white;
 }
 
-/* Dark mode tweaks */
+/* Dark mode support */
 .dark .main-heading,
 .dark .role-heading,
 .dark .description {

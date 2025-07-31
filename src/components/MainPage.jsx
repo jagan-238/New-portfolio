@@ -1,8 +1,6 @@
 import React from 'react';
 import { useTheme } from '../context/ThemeContext';
 import myImage from '../assets/profile2.png';
-import myResume from '../assets/resume.pdf';
-
 import '../styles/mainPage.css';
 
 const MainPage = () => {
@@ -14,7 +12,7 @@ const MainPage = () => {
       <div className="text-section">
         <h2 className="intro-text">Hello!</h2>
         <h1 className="main-heading">
-          I'm <span className="highlight-name">Eragala Jagan Mohan Reddy</span>
+          I'm <span className="highlight-name">Jagan Mohan Reddy</span>
         </h1>
         <h2 className="role-heading">MERN Stack & Frontend Developer</h2>
         <p className="description">
@@ -25,7 +23,6 @@ const MainPage = () => {
           learning and eager to contribute to impactful tech solutions.
         </p>
         <div className="button-group">
-          <a href={myResume} download className="resume-btn">Download Resume</a>
           <a href="#contact" className="contact-btn">Contact</a>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Menu, Youtube, Github, Linkedin, Moon, Sun } from "lucide-react";
 import { useTheme } from "../context/ThemeContext";
-import "../styles/navbar.css"; // ✅ Corrected import path
+import myResume from "../assets/jagan_resume.pdf";
+import "../styles/navbar.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,12 +14,20 @@ function Navbar() {
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
     { name: "Contact", href: "#contact" },
-    {
-      name: "Resume",
-      href: "https://drive.google.com/file/d/1J2EGiIAIdMwBfNfmrV-J1AofGxaMlCXm/view?usp=sharing", 
-      download: false,
-    },
   ];
+
+  const handleResumeClick = () => {
+    // Open resume in new tab
+    window.open(myResume, "_blank");
+
+    // Download resume
+    const link = document.createElement("a");
+    link.href = myResume;
+    link.download = "Jagan_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <nav className={`navbar ${isDarkMode ? "dark" : "light"}`}>
@@ -38,18 +47,16 @@ function Navbar() {
         {/* Navigation Links */}
         <div className={`navbar-links ${isMenuOpen ? "open" : ""}`}>
           <ul>
-            {navItems.map(({ name, href, download }) => (
+            {navItems.map(({ name, href }) => (
               <li key={name}>
-                <a
-                  href={href}
-                  target={name === "Resume" ? "_blank" : "_self"}
-                  rel={name === "Resume" ? "noopener noreferrer" : ""}
-                  download={download || undefined}
-                >
-                  {name}
-                </a>
+                <a href={href}>{name}</a>
               </li>
             ))}
+            <li>
+              <button className="resume-button" onClick={handleResumeClick}>
+                Resume
+              </button>
+            </li>
           </ul>
         </div>
 
@@ -76,7 +83,11 @@ function Navbar() {
           >
             <Linkedin className="icon linkedin" />
           </a>
-          <button onClick={toggleTheme} className="theme-toggle" aria-label="Toggle Theme">
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle"
+            aria-label="Toggle Theme"
+          >
             {isDarkMode ? (
               <Sun className="icon sun" />
             ) : (
