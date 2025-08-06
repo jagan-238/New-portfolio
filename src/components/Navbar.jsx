@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { Menu, Youtube, Github, Linkedin, Moon, Sun } from "lucide-react";
-import { useTheme } from "../context/ThemeContext";
+import { Menu, Youtube, Github, Linkedin } from "lucide-react";
 // import myResume from "../assets/jagan_resume.pdf";
 import "../styles/navbar.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { isDarkMode, toggleTheme } = useTheme();
 
   const navItems = [
     { name: "Home", href: "#home" },
@@ -16,23 +14,23 @@ function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
- const handleResumeClick = () => {
-  const fileId = "1i92Mi4HCEKprpeoPlVNfOJgXA30uSELj";
+  const handleResumeClick = () => {
+    const fileId = "17vkbUy8vbNXWoTVyqZKwj-BDMmDkKc9w";
 
-  // 1. Open resume in a new tab (preview)
-  window.open(`https://drive.google.com/file/d/${fileId}/view`, "_blank");
+    // 1. Open resume in a new tab (preview)
+    window.open(`https://drive.google.com/file/d/${fileId}/view`, "_blank");
 
-  // 2. Trigger download
-  const downloadLink = document.createElement("a");
-  downloadLink.href = `https://drive.google.com/uc?export=download&id=${fileId}`;
-  downloadLink.download = "Jagan_Resume.pdf";
-  document.body.appendChild(downloadLink);
-  downloadLink.click();
-  document.body.removeChild(downloadLink);
-};
+    // 2. Trigger download
+    const downloadLink = document.createElement("a");
+    downloadLink.href = `https://drive.google.com/uc?export=download&id=${fileId}`;
+    downloadLink.download = "Eragala_Jagan_Mohan_Reddy_Resume.pdf";
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    document.body.removeChild(downloadLink);
+  };
 
   return (
-    <nav className={`navbar ${isDarkMode ? "dark" : "light"}`}>
+    <nav className="navbar">
       <div className="navbar-container">
         {/* Brand & Toggle */}
         <div className="navbar-left">
@@ -62,7 +60,7 @@ function Navbar() {
           </ul>
         </div>
 
-        {/* Social & Theme Toggle */}
+        {/* Social Links */}
         <div className="navbar-right">
           <a
             href="https://www.youtube.com/@jaganmohanreddy9266"
@@ -85,17 +83,6 @@ function Navbar() {
           >
             <Linkedin className="icon linkedin" />
           </a>
-          <button
-            onClick={toggleTheme}
-            className="theme-toggle"
-            aria-label="Toggle Theme"
-          >
-            {isDarkMode ? (
-              <Sun className="icon sun" />
-            ) : (
-              <Moon className="icon moon" />
-            )}
-          </button>
         </div>
       </div>
     </nav>

@@ -6,8 +6,8 @@
   padding: 5rem 1rem 1.5rem;
   transition: background-color 0.3s ease;
   min-height: auto;
-  max-width: 1050px;        
-  margin: 0 auto;           
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
 /* ========== Responsive Layout: Large Screens ========== */
@@ -25,17 +25,6 @@
     width: 50%;
     max-width: 600px;
   }
-}
-
-/* ========== Theme Modes ========== */
-.light-mode {
-  background-color: #f3f4f6;
-  color: #1f2937;
-}
-
-.dark-mode {
-  background-color: #1f2937;
-  color: #f9fafb;
 }
 
 /* ========== About Section ========== */
@@ -112,17 +101,9 @@
   color: #111827;
 }
 
-.dark-mode .education-title {
-  color: #f9fafb;
-}
-
 .education-subtext {
   font-size: 1rem;
   color: #4b5563;
-}
-
-.dark-mode .education-subtext {
-  color: #d1d5db;
 }
 
 .education-date {
@@ -136,10 +117,6 @@
   font-weight: 500;
   margin-top: 4px;
   color: #374151;
-}
-
-.dark-mode .education-score {
-  color: #e5e7eb;
 }
 
 /* ========== Responsive Fixes: Below 1024px ========== */

@@ -3,16 +3,15 @@
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: 120px 60px 80px; /* ⬆️ Increased top & side padding */
-  gap: 60px;                /* ⬆️ More spacing between image and text */
-  flex-wrap: wrap;
-  max-width: 1050px;        /* ⬅️ Limit width like home.css */
-  margin: 0 auto;           /* ⬅️ Center the section */
+  padding: 120px 60px 80px;
+  gap: 60px;
+  max-width: 1050px;
+  margin: 0 auto;
 }
 
 .text-section {
   flex: 1 1 450px;
-  max-width: 600px;         /* ⬆️ Slightly increased for wider screens */
+  max-width: 600px;
 }
 
 .image-section {
@@ -39,7 +38,6 @@
   display: block;
 }
 
-/* Typography spacing and size tuning */
 .intro-text {
   font-size: 1.6rem;
   margin-bottom: 10px;
@@ -100,15 +98,4 @@
 .contact-btn:hover {
   background-color: #007acc;
   color: white;
-}
-
-/* Dark mode support */
-.dark .main-heading,
-.dark .role-heading,
-.dark .description {
-  color: #ddd;
-}
-
-.dark .image-container {
-  background-color: #111;
 }

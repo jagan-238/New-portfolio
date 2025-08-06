@@ -8,11 +8,6 @@
   transition: background-color 0.3s ease;
 }
 
-.skills-section.dark {
-  background-color: #111827;
-  color: #f9fafb;
-}
-
 .skills-title {
   font-size: 2rem;
   font-weight: bold;
@@ -70,10 +65,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.skills-section.dark .icon-circle {
-  background-color: #1f2937;
-}
-
 .skill-icon {
   width: 40px;
   height: 40px;
@@ -82,10 +73,6 @@
 .skill-name {
   font-size: 0.9rem;
   font-weight: 500;
-}
-
-.skills-section.dark .skill-name {
-  color: #d1d5db;
 }
 
 @keyframes rotate {

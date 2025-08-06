@@ -1,24 +1,12 @@
 import React from 'react';
 import {
   Github,
-  Linkedin,
-  Youtube,
-  Globe,
-  Heart,
-  Coffee,
-  Code,
-  Mail,
-  Phone,
-  MessageSquare,
 } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
 import '../styles/github.css'; // ✅ corrected path
 
 function GithubInfo() {
-  const { isDarkMode } = useTheme();
-
   return (
-    <div className={`github-section ${isDarkMode ? 'dark' : 'light'}`}>
+    <div className="github-section">
       <div className="github-container">
         {/* Header */}
         <div className="github-header">

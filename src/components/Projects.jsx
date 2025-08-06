@@ -1,5 +1,4 @@
 import React from "react";
-import { useTheme } from "../context/ThemeContext";
 import "../styles/projects.css"; // Correct path
 
 // Import images
@@ -47,8 +46,8 @@ const projects = [
   },
 ];
 
-const ProjectCard = ({ project, isDarkMode }) => (
-  <div className={`project-card ${isDarkMode ? "dark" : ""}`}>
+const ProjectCard = ({ project }) => (
+  <div className="project-card">
     <img src={project.image} alt={project.title} className="project-image" />
     <div className="project-content">
       <h3>{project.title}</h3>
@@ -73,14 +72,12 @@ const ProjectCard = ({ project, isDarkMode }) => (
 );
 
 const Projects = () => {
-  const { isDarkMode } = useTheme();
-
   return (
-    <section id="projects" className={`projects-section ${isDarkMode ? "dark" : ""}`}>
+    <section id="projects" className="projects-section">
       <h2 className="projects-heading">Projects</h2>
       <div className="projects-grid">
         {projects.map((project, index) => (
-          <ProjectCard key={index} project={project} isDarkMode={isDarkMode} />
+          <ProjectCard key={index} project={project} />
         ))}
       </div>
     </section>

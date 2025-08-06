@@ -3,16 +3,8 @@
   min-height: auto;
   padding: 2rem 1rem;
   transition: all 0.3s ease;
-}
-
-.contact-container.light {
   background: linear-gradient(to bottom right, white, white);
   color: #1f2937;
-}
-
-.contact-container.dark {
-  background: linear-gradient(to bottom right, #929aa5, #8e95a3);
-  color: #f9fafb;
 }
 
 .contact-box {
@@ -100,27 +92,11 @@ textarea {
   border-radius: 0.375rem;
   font-size: 0.9rem;
   outline: none;
+  background-color: #ffffff;
+  color: #111111;
 }
 
-/* Dark‑mode overrides for input backgrounds/text */
-.contact-container.dark input,
-.contact-container.dark textarea {
-  background-color: #ffffff;   /* white background */
-  color: #111111;              /* nearly black text */
-  border: 1px solid #d1d5db;   /* light grey border */
-}
-
-.contact-container.dark input:focus,
-.contact-container.dark textarea:focus {
-  border-color: #2563eb;       /* bright blue outline */
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.3);
-}
-
-.contact-container.dark input::placeholder,
-.contact-container.dark textarea::placeholder {
-  color: #0fc303;              /* mid‑grey placeholder */
-}
-
+/* Focus styles */
 .input-group input:focus,
 textarea:focus {
   border-color: #3b82f6;
@@ -142,6 +118,7 @@ textarea {
   min-height: 4rem;
 }
 
+/* Submit Button */
 .submit-btn {
   display: inline-flex;
   align-items: center;

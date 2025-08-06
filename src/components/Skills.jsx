@@ -1,6 +1,5 @@
 import React from 'react';
-import { useTheme } from '../context/ThemeContext';
-import '../styles/skills.css'; // ✅ Corrected CSS import path
+import '../styles/skills.css'; // CSS import
 
 // Icons
 import htmlIcon from '../assets/icons/html-5.png';
@@ -24,10 +23,8 @@ const skills = [
 ];
 
 const Skills = () => {
-  const { isDarkMode } = useTheme();
-
   return (
-    <div id="skills" className={`skills-section ${isDarkMode ? 'dark' : ''}`}>
+    <div id="skills" className="skills-section">
       <h2 className="skills-title">Skills</h2>
       <div className="skills-grid">
         {skills.map((skill, index) => (

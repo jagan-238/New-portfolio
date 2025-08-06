@@ -11,7 +11,7 @@ import {
   Phone,
   MessageSquare
 } from 'lucide-react';
-import '../styles/footer.css'; // ✅ Corrected import path
+import '../styles/footer.css';
 
 function Footer() {
   return (

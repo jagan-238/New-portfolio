@@ -1,13 +1,10 @@
 import React from 'react';
-import { useTheme } from '../context/ThemeContext';
 import myImage from '../assets/profile2.png';
 import '../styles/mainPage.css';
 
 const MainPage = () => {
-  const { isDarkMode } = useTheme();
-
   return (
-    <div id="home" className={`main-page ${isDarkMode ? 'dark' : 'light'}`}>
+    <div id="home" className="main-page">
       {/* Left Section */}
       <div className="text-section">
         <h2 className="intro-text">Hello!</h2>

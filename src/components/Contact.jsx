@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { Send, Mail, User, Phone, MessageSquare } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
 import '../styles/contact.css'; // ✅ fixed path
 
 function Contact() {
-  const { isDarkMode } = useTheme();
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -27,7 +24,7 @@ function Contact() {
   };
 
   return (
-    <div id="contact" className={`contact-container ${isDarkMode ? 'dark' : 'light'}`}>
+    <div id="contact" className="contact-container">
       <div className="contact-box">
         <div className="contact-grid">
           {/* Left Section */}

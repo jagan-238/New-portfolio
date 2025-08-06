@@ -7,23 +7,20 @@ import About from './components/About';
 import GitHub from './components/GitHub';
 import Footer from './components/Footer';
 import Contact from './components/Contact';
-import { ThemeProvider } from './context/ThemeContext';
 import './App.css'; // Optional: Include if you have global styles
 
 function App() {
   return (
-    <ThemeProvider>
-      <div className="app">
-        <Navbar />
-        <MainPage />
-        <About />
-        <Skills />
-        <Projects />
-        <GitHub />
-        <Contact />
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="app">
+      <Navbar />
+      <MainPage />
+      <About />
+      <Skills />
+      <Projects />
+      <GitHub />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
 

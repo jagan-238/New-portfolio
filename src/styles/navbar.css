@@ -7,17 +7,7 @@
   padding: 18px 0;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s;
-}
-
-/* Light theme */
-.navbar.light {
   background: linear-gradient(to right, #4f46e5, #4338ca);
-  color: white;
-}
-
-/* Dark theme */
-.navbar.dark {
-  background-color: #1f2937;
   color: white;
 }
 
@@ -93,7 +83,7 @@
   color: #facc15;
 }
 
-/* Resume button style (ONLY this one styled as button) */
+/* Resume button style */
 .resume-button {
   display: inline-block;
   background-color: white;
@@ -113,7 +103,7 @@
   border-color: white;
 }
 
-/* Right side: icons and theme toggle */
+/* Right side: icons */
 .navbar-right {
   display: flex;
   align-items: center;
@@ -139,21 +129,6 @@
 
 .linkedin:hover {
   color: #0a66c2;
-}
-
-/* Theme toggle button */
-.theme-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.sun {
-  color: #facc15;
-}
-
-.moon {
-  color: #e5e7eb;
 }
 
 /* Large screens */

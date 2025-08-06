@@ -6,11 +6,6 @@
   text-align: center;
 }
 
-.projects-section.dark {
-  background-color: #111827;
-  color: #f9fafb;
-}
-
 .projects-section h2 {
   font-size: 2rem;
   margin-bottom: 40px;
@@ -39,11 +34,6 @@
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   text-align: left;
-}
-
-.project-card.dark {
-  background-color: #1f2937;
-  color: #f9fafb;
 }
 
 .project-card:hover {
@@ -86,11 +76,6 @@
   font-size: 0.75rem;
   padding: 4px 8px;
   border-radius: 4px;
-}
-
-.project-card.dark .tech-tag {
-  background-color: #2563eb;
-  color: #fff;
 }
 
 /* Links */

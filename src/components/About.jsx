@@ -1,10 +1,7 @@
 import React from 'react';
-import { useTheme } from '../context/ThemeContext';
 import '../styles/about.css'; 
 
 const AboutMe = () => {
-  const { isDarkMode } = useTheme();
-
   return (
     <div id="about" className="about-container">
       <div className="about-section">
@@ -66,3 +63,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+
